@@ -7,6 +7,10 @@ handlers:
     static_files: favicon.svg
     upload: favicon.svg
 
+  - url: /screenshot.png
+    static_files: screenshot.png
+    upload: screenshot.png
+
   - url: /styles.css
     static_files: styles.css
     upload: styles.css
