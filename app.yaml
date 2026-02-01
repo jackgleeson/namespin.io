@@ -1,0 +1,22 @@
+runtime: nodejs24
+
+instance_class: F1
+
+handlers:
+  - url: /favicon.svg
+    static_files: favicon.svg
+    upload: favicon.svg
+
+  - url: /styles.css
+    static_files: styles.css
+    upload: styles.css
+    mime_type: text/css
+
+  - url: /app.js
+    static_files: app.js
+    upload: app.js
+    mime_type: application/javascript
+
+  - url: /.*
+    static_files: index.html
+    upload: index.html
