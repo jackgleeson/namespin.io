@@ -336,7 +336,7 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 
 // Initial sample names
-entriesText.value = `Harry Potter
+const DEFAULT_NAMES = `Harry Potter
 Hermione Granger
 Ron Weasley
 SpongeBob
@@ -351,7 +351,16 @@ Shrek
 Dory
 Simba
 Batman`;
+
+entriesText.value = DEFAULT_NAMES;
 entries = getEntriesFromText();
 updateCount();
 resizeCanvas();
 drawWheel();
+
+// Warn user before leaving if names have been modified
+window.addEventListener('beforeunload', (e) => {
+  if (entriesText.value.trim() !== DEFAULT_NAMES.trim()) {
+    e.preventDefault();
+  }
+});
