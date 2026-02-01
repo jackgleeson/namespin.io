@@ -11,6 +11,7 @@ A simple, fun spin-the-wheel web app for randomly picking names. Perfect for raf
 - Spin history tracking
 - Confetti celebration for winners
 - Fully client-side, no server required
+- 100% private — no data is saved or sent anywhere
 
 ## Usage
 
