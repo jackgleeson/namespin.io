@@ -433,6 +433,34 @@
         font-size: 1.8rem;
       }
     }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px 20px;
+      background: #f8f8f8;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #4a90d9;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-privacy {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #999;
+    }
   </style>
 </head>
 <body>
@@ -485,6 +513,11 @@
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+    Free and open-source. <a href="https://github.com/jackgleeson/namespin.io" target="_blank">View on GitHub</a>
+    <div class="footer-privacy">No data is saved — your name lists are completely private.</div>
+  </footer>
 
   <div class="winner-modal" id="winnerModal">
     <div class="winner-content">
