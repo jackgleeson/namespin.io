@@ -1,6 +1,6 @@
 # NameSpin.io
 
-A simple, fun spin-the-wheel web app for randomly picking names. Perfect for raffles, classroom activities, or settling debates.
+A simple, fun spin-the-wheel web app for randomly picking names from a list. Perfect for classroom activities, giveaways or deciding who takes the dog for a walk!.
 
 ![NameSpin.io](screenshot.png)
 
