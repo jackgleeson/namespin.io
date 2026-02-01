@@ -2,6 +2,8 @@
 
 A simple, fun spin-the-wheel web app for randomly picking names. Perfect for raffles, classroom activities, or settling debates.
 
+![NameSpin.io](screenshot.png)
+
 ## Features
 
 - Add names (one per line)
