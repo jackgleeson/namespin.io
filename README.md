@@ -1,0 +1,19 @@
+# NameSpin.io
+
+A simple, fun spin-the-wheel web app for randomly picking names. Perfect for raffles, classroom activities, or settling debates.
+
+## Features
+
+- Add names (one per line)
+- Adjustable spin duration (5s, 10s, 15s)
+- Spin history tracking
+- Confetti celebration for winners
+- Fully client-side, no server required
+
+## Usage
+
+Open `index.html` in a browser. That's it.
+
+## License
+
+MIT
