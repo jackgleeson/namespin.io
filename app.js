@@ -82,11 +82,13 @@ function getEntriesFromText() {
 }
 
 function drawWheel() {
-  const centerX = canvas.width / 2;
-  const centerY = canvas.height / 2;
+  const cssWidth = parseFloat(canvas.style.width) || canvas.width;
+  const cssHeight = parseFloat(canvas.style.height) || canvas.height;
+  const centerX = cssWidth / 2;
+  const centerY = cssHeight / 2;
   const radius = Math.min(centerX, centerY) - 10;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, cssWidth, cssHeight);
 
   if (entries.length === 0) {
     ctx.beginPath();
@@ -322,13 +324,19 @@ document.querySelectorAll('.tab').forEach(tab => {
 
 clearHistoryBtn.addEventListener('click', clearHistory);
 
-// Handle canvas resize for responsive
+// Handle canvas resize for responsive (with high-DPI support)
 function resizeCanvas() {
   const container = document.querySelector('.wheel-container');
   const size = Math.min(container.offsetWidth, container.offsetHeight);
-  if (size > 0 && size !== canvas.width) {
-    canvas.width = size;
-    canvas.height = size;
+  const dpr = window.devicePixelRatio || 1;
+  const scaledSize = size * dpr;
+
+  if (size > 0 && scaledSize !== canvas.width) {
+    canvas.width = scaledSize;
+    canvas.height = scaledSize;
+    canvas.style.width = size + 'px';
+    canvas.style.height = size + 'px';
+    ctx.scale(dpr, dpr);
     drawWheel();
   }
 }

@@ -369,6 +369,7 @@ body {
   .container {
     flex-direction: column;
     padding: 15px;
+    padding-top: 60px;
     gap: 20px;
   }
 
@@ -393,6 +394,7 @@ body {
 @media (max-width: 650px) {
   .container {
     padding: 10px;
+    padding-top: 50px;
     gap: 15px;
   }
 
